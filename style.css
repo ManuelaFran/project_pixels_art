@@ -39,7 +39,7 @@
 #pixel-board {
    margin: 1rem auto;
    display: flex;
-   flex-wrap: wrap; 
+   flex-wrap: wrap;
 }
 
 .pixel {
@@ -47,5 +47,9 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
+}
+
+.color:first-child {
+    background-color: black;
 }
 
