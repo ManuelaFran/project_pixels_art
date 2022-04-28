@@ -60,3 +60,7 @@
 .line {
   display: flex;
 }
+
+.clear {
+  background-color: white;
+}

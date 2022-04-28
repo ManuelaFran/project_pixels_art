@@ -18,3 +18,13 @@ const pixel = document.querySelectorAll('.pixel');
 for (const index of pixel) {
   index.addEventListener('click', selectColor);
 }
+
+function clearPixel() {
+  for (const index of board) {
+    index.style.backgroundColor = 'white';
+  }
+}
+const board = document.querySelectorAll('.pixel')
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearPixel);
+
