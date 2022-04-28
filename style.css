@@ -1,62 +1,62 @@
 * {
-    margin: 0;
+margin: 0;
 }
 
 #color-palette {
-    display: inline-block;
-    width: 70%;
-    height: 50%;
+display: inline-block;
+width: 70%;
+height: 50%;
 }
 
 #black {
-    background-color: black;
-    border: 1px solid black;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+background-color: black;
+border: 1px solid black;
+display: inline-block;
+width: 50px;
+height: 50px;
 }
 
 #red {
-    background-color: red;
-    border: 1px solid black;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+background-color: red;
+border: 1px solid black;
+display: inline-block;
+width: 50px;
+height: 50px;
 }
 
 #blue {
-    background-color: blue;
-    border: 1px solid black;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+background-color: blue;
+border: 1px solid black;
+display: inline-block;
+width: 50px;
+height: 50px;
 }
 
 #green {
-    background-color: green;
-    border: 1px solid black;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+background-color: green;
+border: 1px solid black;
+display: inline-block;
+width: 50px;
+height: 50px;
 }
 
 #pixel-board {
-    margin: 1rem auto;
+margin: 1rem auto;
 }
 
 .pixel {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    display: inline-block;
-    margin: 0;
+background-color: white;
+width: 40px;
+height: 40px;
+border: 1px solid black;
+display: inline-block;
+margin: 0;
 }
 
 .color:first-child {
-    background-color: black;
+background-color: black;
 }
 
 .line {
-    display: flex;
+display: flex;
 }
