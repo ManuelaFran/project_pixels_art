@@ -1,5 +1,7 @@
 const colorSelect = document.querySelectorAll('.color');
+const pixelBoard = document.querySelector('#pixel-board');
 
+//Adicionou e removeu a classe selected - Requisito 7
 function addSelected(event) {
   const selectedRemove = document.querySelector('.selected');
   selectedRemove.classList.remove('selected');
@@ -8,23 +10,34 @@ function addSelected(event) {
 for (const color of colorSelect) {
   color.addEventListener('click', addSelected);
 }
-
+//Preenche os quadros com a cor selecionada - Requisito 8
 function selectColor(event) {
   const color = document.querySelector('.selected');
   const background = window.getComputedStyle(color).getPropertyValue('background-color');
   event.target.style.background = background;
 }
-const pixel = document.querySelectorAll('.pixel');
-for (const index of pixel) {
-  index.addEventListener('click', selectColor);
-}
-
+//Preenche os quadros com a cor branca - Requisito 9
 function clearPixel() {
-  for (const index of board) {
-    index.style.backgroundColor = 'white';
+  const clearButton = document.getElementById('clear-board');
+  const square = document.querySelectorAll('.pixel');
+  const clearColor = 'white';
+
+  clearButton.addEventListener('click', function() {
+    for (index = 0; index < square.length; index += 1) {
+      if (square[index].style.backgroundColor !== 'white') {
+        square[index].style.backgroundColor = clearColor;
+      }
+    }
+  })
+}clearPixel();
+//Criou o quadro de Pixels - Requisito 4
+function createPixelsBoard(size) {
+  for (let index = 0; index < size * size; index += 1) {
+    const createDiv = document.createElement('div');
+    createDiv.className = 'pixel';
+    createDiv.addEventListener('click', selectColor);
+    createDiv.addEventListener('click', clearPixel);
+    pixelBoard.appendChild(createDiv);
   }
 }
-const board = document.querySelectorAll('.pixel')
-const clearButton = document.getElementById('clear-board');
-clearButton.addEventListener('click', clearPixel);
-
+createPixelsBoard(5);
